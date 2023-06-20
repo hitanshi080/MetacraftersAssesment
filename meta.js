@@ -9,45 +9,45 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const Parlours= []
+const NFTs= []
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintParlour (_name, _hairColor, _outfit, _piercing) {
-    const Parlour= {
-        "name": _name,
-        "hairColor": _hairColor,
-        "outfit": _outfit,
-        "piercing": _piercing
+function mintNFT (_faceColor, _skinTone, _Tanning, _Tatoo) {
+    const NFT= {
+        "faceColor": _faceColor,
+        "skinTone": _skinTone,
+        "Tanning": _Tanning,
+        "Tatoo": _Tatoo
     }
-    Parlours.push(Parlour);
-    console.log("Minted: "+ _name);
+    NFTs.push(NFT);
+    console.log("Facecolor: "+ _faceColor);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
-function listParlours () {
-    for(let i=0; i < Parlours.length; i++){
-        console.log("\nID: \t\t"+ (i+1));
-        console.log("Name: \t\t"+Parlours[i].name);
-        console.log("HairColor: \t"+Parlours[i].hairColor);
-        console.log("Outfit: \t"+Parlours[i].outfit);
-        console.log("Piercing: \t"+Parlours[i].piercing);
+function listNFTs () {
+    for(let i=0; i < NFTs.length; i++){
+        console.log("\nID:      \t"+ (i+1));
+        console.log("FaceColor: \t"+NFTs[i].faceColor);
+        console.log("skinTone:  \t"+NFTs[i].skinTone);
+        console.log("Tanning:   \t"+NFTs[i].Tanning);
+        console.log("Tatoo:     \t"+NFTs[i].Tatoo);
     }
         
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log("\n"+Parlours.length);
+    console.log("\n"+NFTs.length);
 }
 
 // call your functions below this line
-mintParlour("rach", "blonde", "green dress", "ear");
-mintParlour("damon", "black", "black overalls", "eyebrow");
-mintParlour("geralt", "greenish black", "armour", "ear, eyebrow");
-mintParlour("tanjiro", "red", "green kimono", "ear");
-mintParlour("blair", "black", "princess dress", "lip");
+mintNFT("Fair", "dusky", "Yes", "wrist");
+mintNFT("dark", "olive skin", "fairly", "arm");
+mintNFT("Fair", "Brown skin", "heavy", "shoulder");
+mintNFT("Light", "Honey", "Light", "Neck");
+mintNFT("Deep", "cool skin undertone", "Light", "Belly");
 
-listParlours();
+listNFTs();
 getTotalSupply();
